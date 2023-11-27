@@ -3,6 +3,15 @@ import { useEffect, useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import * as Icon from 'react-bootstrap-icons';
 
+interface car {
+    id: any;
+    make: any;
+    type: any;
+    year: any;
+    model: any;
+}
+
+
 function SavedCars() {
     const [savedCars, setSavedCars] = useState([]);
 
@@ -27,7 +36,7 @@ function SavedCars() {
             <div onClick={clearLS} className="text-center"><span className="btn btn-primary"><Icon.Trash2Fill />  Clear Saved Cars</span></div>
             <div className="container d-flex gap-1 flex-wrap justify-content-around bg-black">
                 {savedCars.length > 0 ? (
-                    savedCars.map((post, index) => (
+                    savedCars.map((post: car, index) => (
                         <div key={index} className="col-lg-2 col-md-3 col-sm-12 overflow-hidden m-3">
                             <div className="card text-center">
                                 <div className="card-header border-primary border ">
