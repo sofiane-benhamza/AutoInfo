@@ -10,6 +10,13 @@ interface Props {
     type: string;
     year: string;
 }
+interface car {
+    id: any;
+    make: any;
+    type: any;
+    year: any;
+    model: any;
+}
 
 function GetCars({ make, type, year }: Props) {
     const [posts, setPosts] = useState<any[]>([]);
@@ -61,7 +68,7 @@ function GetCars({ make, type, year }: Props) {
     return (
         <>
             {posts.length > 0 ? (
-                posts.map((post, index) => (
+                posts.map((post: car, index) => (
                     <div className="col-lg-2 col-md-3 col-sm-12 overflow-hidden" key={index}>
                         <div className="card text-center">
                             <div className="card-header border-primary border">{post.make}</div>
