@@ -12,7 +12,7 @@ export default function Navbar() {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link to='/'>
-                            <p className={active + ' nav-link text-light '} style={fonted}> Brows<span style={bigger} >e <Icon.CarFrontFill /> C</span>ars
+                            <p className={active + ' nav-link text-light '} style={fonted}> Brows<span style={bigger} >e <Icon.CarFrontFill /> V</span>ehicles
                             </p>
                         </Link>
                     </li>
